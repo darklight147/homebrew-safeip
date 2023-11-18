@@ -5,11 +5,11 @@
 class Safeip < Formula
   desc ""
   homepage "https://github.com/darklight147/safeip"
-  version "1.1.2"
+  version "1.1.3"
 
   on_macos do
-    url "https://github.com/darklight147/safeip/releases/download/v1.1.2/safeip_1.1.2_darwin_all.tar.gz"
-    sha256 "114e5aae802056ec9e33e5498054fa3544d4370c4fb386d3fa84df1f20a24a2d"
+    url "https://github.com/darklight147/safeip/releases/download/v1.1.3/safeip_1.1.3_darwin_all.tar.gz"
+    sha256 "c5e69deb740004069f87f3c582e30eb2fa095b5dfc92614142dd7f8b2e1ddcfb"
 
     def install
       bin.install "safeip"
@@ -18,16 +18,16 @@ class Safeip < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darklight147/safeip/releases/download/v1.1.2/safeip_1.1.2_linux_arm64.tar.gz"
-      sha256 "e5d85c7a0abd9169e40d2d8fe1f21acbecc26a16675a5797246b2f4923dceee4"
+      url "https://github.com/darklight147/safeip/releases/download/v1.1.3/safeip_1.1.3_linux_arm64.tar.gz"
+      sha256 "de420ccca2306642c0acd4dcfc3972ddab9d5a076a7a0df4c4c001a7f7fc2a71"
 
       def install
         bin.install "safeip"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/darklight147/safeip/releases/download/v1.1.2/safeip_1.1.2_linux_amd64.tar.gz"
-      sha256 "b6a60f73efecb0200955774330f890ba108ed60629cf3ae48b298f6afcee9e90"
+      url "https://github.com/darklight147/safeip/releases/download/v1.1.3/safeip_1.1.3_linux_amd64.tar.gz"
+      sha256 "7175e3d12bd09e3b0cfc393c7f2e98dceb23340fd2f1b02b227ea24e7583e956"
 
       def install
         bin.install "safeip"
