@@ -9,37 +9,37 @@ class Safeip < Formula
 
   on_macos do
     url "https://github.com/darklight147/safeip/releases/download/v1.1.1/safeip_1.1.1_darwin_all.tar.gz"
-    sha256 "08fed8b1dd5a6c1442de05bf312ccc4866a7dd591e290e4cb9cd69b6b85257fe"
+    sha256 "4e965b7ed4c9b19d2a340d00b4f1f1af617454a5e05ef4c90204d60b90db49e2"
 
     def install
       bin.install "safeip"
       zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
       fish_completion.install "completions/goreleaser.fish"
-      bash_completion.install "completions/goreleaser.bash"
+      bash_completion.install "completions/goreleaser.bash" => "goreleaser"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/darklight147/safeip/releases/download/v1.1.1/safeip_1.1.1_linux_arm64.tar.gz"
-      sha256 "dad4daddba20a0b8186173176da3edbf351247458d95b1b78af1d0b75fee7074"
+      sha256 "cc1e5d5178c54ff7d813af4849e6596b9e531816449cab590ced418b38741cd6"
 
       def install
         bin.install "safeip"
         zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
         fish_completion.install "completions/goreleaser.fish"
-        bash_completion.install "completions/goreleaser.bash"
+        bash_completion.install "completions/goreleaser.bash" => "goreleaser"
       end
     end
     if Hardware::CPU.intel?
       url "https://github.com/darklight147/safeip/releases/download/v1.1.1/safeip_1.1.1_linux_amd64.tar.gz"
-      sha256 "831c09a4b4d1254cef228b82353926bfbc805c25e5e69d4d646e039dd943863f"
+      sha256 "279e6efcfe1832261b13d3082fde08e98a4ad917fa959653fb4d80c9287d620c"
 
       def install
         bin.install "safeip"
         zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
         fish_completion.install "completions/goreleaser.fish"
-        bash_completion.install "completions/goreleaser.bash"
+        bash_completion.install "completions/goreleaser.bash" => "goreleaser"
       end
     end
   end
