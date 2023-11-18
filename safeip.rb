@@ -5,32 +5,41 @@
 class Safeip < Formula
   desc ""
   homepage "https://github.com/darklight147/safeip"
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
-    url "https://github.com/darklight147/safeip/releases/download/v1.1.0/safeip_1.1.0_darwin_all.tar.gz"
-    sha256 "380a03316d179a6c99345cd0245772b2a19e73b47e7589d8c69603e9804eed21"
+    url "https://github.com/darklight147/safeip/releases/download/v1.1.1/safeip_1.1.1_darwin_all.tar.gz"
+    sha256 "08fed8b1dd5a6c1442de05bf312ccc4866a7dd591e290e4cb9cd69b6b85257fe"
 
     def install
       bin.install "safeip"
+      zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
+      fish_completion.install "completions/goreleaser.fish"
+      bash_completion.install "completions/goreleaser.bash"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darklight147/safeip/releases/download/v1.1.0/safeip_1.1.0_linux_arm64.tar.gz"
-      sha256 "40acdc21b16198819b67f106dc952acbf318a8c6cb1dc71dba2ccdd5482460c4"
+      url "https://github.com/darklight147/safeip/releases/download/v1.1.1/safeip_1.1.1_linux_arm64.tar.gz"
+      sha256 "dad4daddba20a0b8186173176da3edbf351247458d95b1b78af1d0b75fee7074"
 
       def install
         bin.install "safeip"
+        zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
+        fish_completion.install "completions/goreleaser.fish"
+        bash_completion.install "completions/goreleaser.bash"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/darklight147/safeip/releases/download/v1.1.0/safeip_1.1.0_linux_amd64.tar.gz"
-      sha256 "f6f509ae8ff06e36dc8a09456c3352703274ac4dc36c5427647760ddc8796663"
+      url "https://github.com/darklight147/safeip/releases/download/v1.1.1/safeip_1.1.1_linux_amd64.tar.gz"
+      sha256 "831c09a4b4d1254cef228b82353926bfbc805c25e5e69d4d646e039dd943863f"
 
       def install
         bin.install "safeip"
+        zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
+        fish_completion.install "completions/goreleaser.fish"
+        bash_completion.install "completions/goreleaser.bash"
       end
     end
   end
