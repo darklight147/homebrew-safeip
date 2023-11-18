@@ -5,11 +5,11 @@
 class Safeip < Formula
   desc "safeip is a CLI tool to Mask IP addresses and DNS-Like entries from STDIN or FILE."
   homepage "https://github.com/darklight147/safeip"
-  version "1.2.17"
+  version "1.3.0"
 
   on_macos do
-    url "https://github.com/darklight147/safeip/releases/download/v1.2.17/safeip_1.2.17_darwin_all.tar.gz"
-    sha256 "f6ceb09d5064ae98f13de88dc2c6aa3f181294f2c597f5e1a27e9703de89df0f"
+    url "https://github.com/darklight147/safeip/releases/download/v1.3.0/safeip_1.3.0_darwin_all.tar.gz"
+    sha256 "b368e35e5297f8011899dc4f03bb5999083fd5ed3c2ef192f5dada9ec4259d3b"
 
     def install
       bin.install "safeip"
@@ -18,16 +18,16 @@ class Safeip < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darklight147/safeip/releases/download/v1.2.17/safeip_1.2.17_linux_arm64.tar.gz"
-      sha256 "d4b401ce878ffe49cc3b41b329812f2944a1174c873e78f89671152fe8365f27"
+      url "https://github.com/darklight147/safeip/releases/download/v1.3.0/safeip_1.3.0_linux_arm64.tar.gz"
+      sha256 "c8a44394c3827804966248ac5a007ed79a489b007ba15bafbfb1961aa05c180e"
 
       def install
         bin.install "safeip"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/darklight147/safeip/releases/download/v1.2.17/safeip_1.2.17_linux_amd64.tar.gz"
-      sha256 "647cc5c143932178cc05829755f52c080af538182e8133af4cb07ba164329039"
+      url "https://github.com/darklight147/safeip/releases/download/v1.3.0/safeip_1.3.0_linux_amd64.tar.gz"
+      sha256 "7b8837cce699992ab56d339c32a81c0b34eb48279515c7c82d334cbbc50f63ed"
 
       def install
         bin.install "safeip"
