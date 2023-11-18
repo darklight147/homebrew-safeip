@@ -5,41 +5,44 @@
 class Safeip < Formula
   desc ""
   homepage "https://github.com/darklight147/safeip"
-  version "1.2.2"
+  version "1.2.4"
 
   on_macos do
-    url "https://github.com/darklight147/safeip/releases/download/v1.2.2/safeip_1.2.2_darwin_all.tar.gz"
-    sha256 "4387ecf5250b761c0e87da637dd2b659004eca929ee16d67550e1b86d99d13c4"
+    url "https://github.com/darklight147/safeip/releases/download/v1.2.4/safeip_1.2.4_darwin_all.tar.gz"
+    sha256 "686de900e7b9da35ae2d0a9329d59f148f269cae55ceabe0223bb5ac8d38ef16"
 
     def install
       bin.install "safeip"
       zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
       bash_completion.install "completions/goreleaser.bash" => "goreleaser"
       fish_completion.install "completions/goreleaser.fish"
+      bin.install "safeip"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darklight147/safeip/releases/download/v1.2.2/safeip_1.2.2_linux_arm64.tar.gz"
-      sha256 "ebe5b1d3e431d98671ef4f220af4fae15957ed992bfc23cee01999475a1b5f24"
+      url "https://github.com/darklight147/safeip/releases/download/v1.2.4/safeip_1.2.4_linux_arm64.tar.gz"
+      sha256 "cc6b2a93a0712f8c08d7a814be6a47abce7646d45025105c2e44515505b4bace"
 
       def install
         bin.install "safeip"
         zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
         bash_completion.install "completions/goreleaser.bash" => "goreleaser"
         fish_completion.install "completions/goreleaser.fish"
+        bin.install "safeip"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/darklight147/safeip/releases/download/v1.2.2/safeip_1.2.2_linux_amd64.tar.gz"
-      sha256 "162c022c463a90f37fca7cca23bf956438d113c00a461fd02bde80b597b5fc73"
+      url "https://github.com/darklight147/safeip/releases/download/v1.2.4/safeip_1.2.4_linux_amd64.tar.gz"
+      sha256 "a4c8b8b87a8339ae93dae9dc9c6fc69974131e8127aba3a00a5781a43ba7be30"
 
       def install
         bin.install "safeip"
         zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
         bash_completion.install "completions/goreleaser.bash" => "goreleaser"
         fish_completion.install "completions/goreleaser.fish"
+        bin.install "safeip"
       end
     end
   end
